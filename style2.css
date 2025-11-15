@@ -1,0 +1,277 @@
+
+:root {
+    --primary-color: #0077b6; 
+    --secondary-color: #00b4d8; 
+    --success-color: #2a9d8f;
+    --warning-color: #e9c46a; 
+    --danger-color: #e76f51;
+    --background-color: #f8f9fa;
+    --card-background: #ffffff;
+    --text-color: #264653;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--secondary-color);
+}
+
+
+.checker-section {
+    padding: 60px 20px;
+    background-color: var(--card-background);
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.checker-section h1 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 2.2rem;
+}
+
+.checker-section p {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+
+#medicine-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.medicine-input-group {
+    width: 100%;
+    max-width: 450px;
+}
+
+.medicine-name {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.medicine-name:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+}
+
+.control-buttons {
+    margin-bottom: 40px;
+}
+
+.action-button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    margin: 0 10px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.add-button {
+    background-color: #778da9;
+    color: white;
+}
+
+.add-button:hover {
+    background-color: #415a77;
+}
+
+.check-button {
+    background-color: var(--primary-color); 
+    color: white;
+}
+
+.check-button:hover {
+    background-color: #005f96;
+    transform: translateY(-2px);
+}
+
+
+.interaction-results {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 5px solid;
+    text-align: left;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: background-color 0.5s, border-color 0.5s;
+}
+
+.interaction-results h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.result-message {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+.severity-major, .severity-moderate-to-major, .severity-minor, .severity-none {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: 700;
+    margin-right: 10px;
+    text-transform: uppercase;
+}
+
+.interaction-results[style*="f8d7da"] { border-color: var(--danger-color); }
+.severity-major { background-color: var(--danger-color); color: white; }
+
+
+.interaction-results[style*="fff3cd"] { border-color: var(--warning-color); }
+.severity-moderate-to-major { background-color: var(--warning-color); color: #856404; }
+
+
+.interaction-results[style*="cce5ff"] { border-color: var(--secondary-color); }
+.severity-minor { background-color: #cce5ff; color: var(--primary-color); }
+
+
+.interaction-results[style*="d4edda"] { border-color: var(--success-color); }
+.severity-none { background-color: var(--success-color); color: white; }
+
+
+.main-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #bbb;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    
+    
+    .main-header {
+        padding: 15px 20px; 
+    }
+
+    
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    
+    .main-nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .nav-link {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 0.9rem;
+    }
+
+    
+    .checker-section {
+        padding: 40px 15px; 
+    }
+
+    .checker-section h1 {
+        font-size: 1.8rem;
+    }
+    
+
+    .control-buttons {
+        
+        display: flex; 
+        flex-direction: column;
+        gap: 15px; 
+        margin-bottom: 30px;
+    }
+
+    .action-button {
+        width: 100%; 
+        margin: 0; 
+    }
+
+
+    .interaction-results {
+        padding: 20px; 
+        border-radius: 8px;
+    }
+
+    
+    .main-footer {
+        padding: 15px;
+        font-size: 0.8rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    
+    .checker-section h1 {
+        font-size: 1.5rem;
+    }
+    
+    .checker-section p {
+        font-size: 0.9rem;
+        margin-bottom: 25px;
+    }
+    
+    .nav-link {
+        font-size: 0.8rem;
+    }
+}

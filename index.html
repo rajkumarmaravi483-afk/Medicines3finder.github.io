@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Finder | Advanced</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav class="nav-bar">
+            <a href="index.html" class="brand-logo">💊 Medicine Finder</a> 
+            <div class="nav-links">
+                <a href="index.html" class="link">Home</a>
+                <a href="contact.html" class="link">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section id="search-section" class="container">
+            <h1>Find Medicine Alternatives</h1>
+            <div class="search-group">
+                <label for="medicineInput" class="search-label">Enter Medicine Name:</label>
+                <div class="input-control-group">
+                    <input 
+                        type="text" 
+                        id="medicineInput" 
+                        placeholder=" Search Medicines 🔍"
+                        class="medicine-input"
+                    >
+                    <button onclick="searchAlternatives()" class="search-button">
+                        Find Alternatives
+                    </button>
+                    <a href="interaction.html" class="interaction">Interaction Check</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="resultsContainer" class="container results-container">
+            </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <h1 id="greeting-message"></h1> 
+            <p>Your comprehensive resource for medication information and alternatives.</p>
+        </div>
+        <p class="copyright">&copy; 2025 Medicine Finder. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

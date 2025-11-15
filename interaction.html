@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drug Interaction Finder</title>
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">MED CHECKER</div>
+        <nav class="nav-bar">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="#" class="nav-link">Contact Us</a>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section id="interaction-checker" class="checker-section">
+            <div class="container">
+                <h1>🔬 Drug Interaction Checker</h1>
+                <p>Enter at least two medicine names to check for potential drug interactions and safety risks.</p>
+                
+                <div id="medicine-list">
+                    <div class="medicine-input-group">
+                        <input type="text" class="medicine-name" placeholder="Medicine Name 1">
+                    </div>
+                    <div class="medicine-input-group">
+                        <input type="text" class="medicine-name" placeholder="Medicine Name 2">
+                    </div>
+                </div>
+                
+                <div class="control-buttons">
+                    <button id="add-medicine-btn" class="action-button add-button">➕ Add More</button>
+                    <button id="check-interaction-btn" class="action-button check-button">🔬 Check Interaction</button>
+                </div>
+                
+                <div id="results" class="interaction-results" style="display: none;">
+                    <h3>Interaction Status:</h3>
+                    <p id="interaction-details" class="result-message"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p id="greeting-message">Good Morning customer</p>
+    </footer>
+
+    <script src="app.js"></script> 
+</body>
+</html>
